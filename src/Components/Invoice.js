@@ -68,10 +68,10 @@ const Invoice = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    axios.post(`${baseUrl}/generate-invoice`, formData)
+    axios.post(`${baseUrl}/api/generate-invoice`, formData)
       .then(response => {
         toast.success('Invoice generated successfully');
-        const pdfUrl = `${baseUrl}/invoices/${response.data.filename}`;
+        const pdfUrl = `${baseUrl}/api/invoices/${response.data.filename}`;
         window.open(pdfUrl, '_blank');
         setFormData("")
       })
