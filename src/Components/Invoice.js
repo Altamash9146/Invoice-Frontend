@@ -4,7 +4,7 @@ import { Form, Button, Container, Row, Col} from 'react-bootstrap';
 import toast, { Toaster } from 'react-hot-toast';
 import Loader from './Loader/Loader';
 
-const baseUrl = process.env.REACT_BACKEND_BASE_URL
+const baseUrl = process.env.REACT_APP_BACKEND_BASE_URL
 
 const Invoice = () => {
   const [formData, setFormData] = useState({
